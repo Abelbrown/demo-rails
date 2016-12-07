@@ -1,0 +1,11 @@
+<h1>Chercher un resto</h1>
+
+<form action="/search">
+  <input type="text" name="search[:category]" >
+  <input type="text" name="search[:name]" >
+  <input type="submit" value="search">
+</form>
+
+Search for <%= @category %>
+
+<%= link_to "Cherchez un restaurant", about_path %>

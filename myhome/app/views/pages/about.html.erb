@@ -1,0 +1,11 @@
+<h1>Welcome</h1>
+
+<% name = "Boris" %>
+
+<h2>Salut <%=name.capitalize %></h2>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= restaurant[:name]%> <%=restaurant[:address] %></li>
+  <% end %>
+</ul>
