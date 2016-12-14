@@ -7,8 +7,19 @@ Rails.application.routes.draw do
     member do
       get "chef" => "restaurants#chef"
     end
+    resources :reviews, only: [:new, :create]
   end
+
+  namespace :admin do
+    resources :restaurants, only: [:index]
+  end
+
+
+  get "pages" => "pages#home"
+
+  root 'pages#home'
 end
+
 
 
 # get "restaurants" => "restaurant#index"

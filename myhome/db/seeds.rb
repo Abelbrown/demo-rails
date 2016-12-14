@@ -35,3 +35,11 @@ Restaurant.create(name: "Le pré Catalan", stars: 3, address: "route de Suresnes
 #   }
 # ]
 # restaurants_attributes.each { |params| Restaurant.create!(params) }
+#
+
+good = Review.new(content: "chouette !!")
+
+epicure = Restaurant.first
+
+good.restaurant = epicure
+good.save
